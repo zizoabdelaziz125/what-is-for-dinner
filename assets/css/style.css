@@ -1,4 +1,76 @@
-.car-card{
-    background-color: #E0DFD9;
-    border: 2px solid #2F517D;
+/* body */
+body{
+    background-color: #FFFBEA;
+}
+
+/* navbar */
+.navbar{
+    padding: 20px 0px;
+    background-color: #FFFFFF;
+}
+
+/* desktop-menu icons */
+#desktop-menu i{
+    color: #4A5565;
+    font-size: 18px;
+}
+
+#desktop-menu i:hover{
+    color: #F54A00;
+}
+
+/* Profile Image */
+.profile-image {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #f97316;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+/* logo icon */
+.logo-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom right, #f97316, #ef4444);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: white;
+    font-size: 1.25rem;
+}
+
+/* Mobile menu */
+#mobile-menu {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    #desktop-menu {
+        display: none;
+    }
+
+    #mobile-menu {
+        display: block;
+    }
+}
+
+/* Mobile menu buttons */
+.mobile-menu-btn {
+    width: 100%;
+    text-align: left;
+    padding: 0.5rem 1rem;
+    border: none;
+    background: none;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.mobile-menu-btn:hover {
+    color: #f97316;
 }
