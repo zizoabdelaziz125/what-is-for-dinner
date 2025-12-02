@@ -1,21 +1,21 @@
 /* body */
-body{
+body {
     background-color: #FFFBEA;
 }
 
 /* navbar */
-.navbar{
+.navbar {
     padding: 20px 0px;
     background-color: #FFFFFF;
 }
 
 /* desktop-menu icons */
-#desktop-menu i{
+#desktop-menu i {
     color: #4A5565;
     font-size: 18px;
 }
 
-#desktop-menu i:hover{
+#desktop-menu i:hover {
     color: #F54A00;
 }
 
@@ -73,4 +73,123 @@ body{
 
 .mobile-menu-btn:hover {
     color: #f97316;
+}
+
+/* ============================================================= */
+
+.recipe-card {
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    margin-bottom: 2rem;
+}
+
+.recipe-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.rating-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background-color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* info */
+.info-overlay {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(4px);
+    border-radius: 1rem;
+    margin: 0px 10px;
+    margin-bottom: 10px;
+    padding: 1rem;
+
+    .col {
+        text-align: center;
+    }
+
+}
+
+.tab-content {
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+.badge{
+    border-radius: 20px;
+    padding: 10px 10px;
+}
+
+.badge-success{
+    color: #108B43;
+    background-color: #DBFCE7;
+}
+
+.badge-primary{
+    color: #0D6EFD;
+    background-color: #DBEAFE;
+}
+
+.btn-orange{
+    font-size: 15px;
+    padding: 5px 10px;
+    color: #F54A00;
+    background-color: #FFEDD4;
+}
+
+.btn-orange:hover{
+    color: #F54A00;
+    background-color: #ff7c1e;
+}
+
+.time-warning {
+    background-color: #fff5f5;
+    border-left: 4px solid #f44336;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.tab-button {
+    cursor: pointer;
+}
+
+.ingredient-number {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #fd7e14;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.5rem;
+    flex-shrink: 0;
+}
+
+.step-number {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #fd7e14;
+    color: #fff;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    flex-shrink: 0;
+    font-weight: bold;
 }

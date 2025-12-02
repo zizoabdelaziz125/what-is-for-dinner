@@ -14,6 +14,7 @@
 </head>
 
 <body>
+
     <header>
         <nav class="navbar navbar-expand-md bg-light">
 
@@ -68,6 +69,152 @@
 
         </nav>
     </header>
+
+    <div class="container my-5">
+        <div class="recipe-card row g-0">
+
+            <!-- image container -->
+            <div class="col-lg-5 position-relative">
+
+                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=800&auto=format&fit=crop"
+                    alt="Mediterranean Quinoa Bowl" class="recipe-image h-100 w-100">
+
+                <div class="rating-badge">
+                    <i class="fa fa-star text-warning"></i>
+                    <span class="fw-bold">4.5</span>
+                    <span class="text-muted">(156 reviews)</span>
+                </div>
+
+                <div class="row text-center info-overlay">
+                    <div class="col">
+                        <i class="fa fa-clock text-warning fs-4 mb-1"></i>
+                        <div class="text-muted">Prep Time</div>
+                        <div class="fw-bold">20 min</div>
+                    </div>
+                    <div class="col">
+                        <i class="fa fa-fire-burner text-danger fs-4 mb-1"></i>
+                        <div class="text-muted">Cook Time</div>
+                        <div class="fw-bold">35 min</div>
+                    </div>
+                    <div class="col">
+                        <i class="fa fa-users text-primary fs-4 mb-1"></i>
+                        <div class="text-muted">Servings</div>
+                        <div class="fw-bold">2 people</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- data container -->
+            <div class="col-lg-7 p-4">
+
+                <!-- Title & Badges -->
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <div>
+                        <span class="badge badge-success me-1">Easy</span>
+                        <span class="badge badge-primary">Mediterranean</span>
+                        <h2 class="mt-2 fw-bold">Mediterranean Quinoa Bowl</h2>
+                        <p class="text-muted">Healthy bowl with quinoa, vegetables, and tahini dressing</p>
+                    </div>
+
+                    <div class="d-flex align-items-center justify-content-center gap-2 h-100">
+                        <button class="btn btn-orange">
+                            <i class="fa fa-bookmark"></i>
+                        </button>
+                        <button class="btn btn-orange">
+                            <i class="fa fa-share-nodes"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Time Warning -->
+                <div class="d-flex align-items-center time-warning" id="timeWarning">
+                    <i class="fa fa-triangle-exclamation fs-4 text-danger me-3"></i>
+                    <div>
+                        <div class="fw-bold text-danger">Extended Preparation Time</div>
+                        <div class="text-danger">This recipe requires more than 45 minutes to prepare. Plan accordingly!
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tabs -->
+                <ul class="nav nav-tabs mb-3" id="recipeTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="ingredients-tab" data-bs-toggle="tab"
+                            data-bs-target="#ingredients" type="button" role="tab">Ingredients</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="instructions-tab" data-bs-toggle="tab"
+                            data-bs-target="#instructions" type="button" role="tab">Instructions</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="nutrition-tab" data-bs-toggle="tab" data-bs-target="#nutrition"
+                            type="button" role="tab">Nutrition</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="tips-tab" data-bs-toggle="tab" data-bs-target="#tips" type="button"
+                            role="tab">Chef's Tips</button>
+                    </li>
+                </ul>
+
+                <div class="tab-content" id="recipeTabContent">
+                    <!-- Ingredients Tab -->
+                    <div class="tab-pane fade show active" id="ingredients" role="tabpanel">
+                        <ul class="list-unstyled">
+                            <li class="d-flex align-items-start mb-2">
+                                <div class="ingredient-number">1</div>
+                                <span>1 cup quinoa</span>
+                            </li>
+                            <li class="d-flex align-items-start mb-2">
+                                <div class="ingredient-number">2</div>
+                                <span>Cherry tomatoes, halved</span>
+                            </li>
+                            <li class="d-flex align-items-start mb-2">
+                                <div class="ingredient-number">3</div>
+                                <span>Cucumber, diced</span>
+                            </li>
+                            <li class="d-flex align-items-start mb-2">
+                                <div class="ingredient-number">4</div>
+                                <span>Red onion, sliced</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Instructions Tab -->
+                    <div class="tab-pane fade" id="instructions" role="tabpanel">
+                        <div class="mb-3 d-flex">
+                            <div class="step-number">1</div>
+                            <p>Rinse quinoa thoroughly. Cook according to package directions, usually 15 minutes.</p>
+                        </div>
+                        <div class="mb-3 d-flex">
+                            <div class="step-number">2</div>
+                            <p>While quinoa cooks, prepare all vegetables and set aside.</p>
+                        </div>
+                    </div>
+
+                    <!-- Nutrition Tab -->
+                    <div class="tab-pane fade" id="nutrition" role="tabpanel">
+                        <div class="row g-3">
+                            <div class="col-6 p-3 bg-light rounded d-flex justify-content-between align-items-center">
+                                <span>Calories</span>
+                                <span class="fw-bold">480 kcal</span>
+                            </div>
+                            <div class="col-6 p-3 bg-light rounded d-flex justify-content-between align-items-center">
+                                <span>Protein</span>
+                                <span class="fw-bold">18g</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chef Tips Tab -->
+                    <div class="tab-pane fade" id="tips" role="tabpanel">
+                        <p>Use fresh parsley for best taste. Toast the quinoa for extra flavor.</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
 
     <script src="./assets/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/scripts.js"></script>
