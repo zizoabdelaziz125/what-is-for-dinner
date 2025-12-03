@@ -108,7 +108,7 @@
             <div class="col-lg-7 p-4">
 
                 <!-- Title & Badges -->
-                <div class="d-flex justify-content-between align-items-start mb-3">
+                <div class="d-flex justify-content-between align-items-center mb-3">
                     <div>
                         <span class="badge badge-success me-1">Easy</span>
                         <span class="badge badge-primary">Mediterranean</span>
@@ -127,7 +127,7 @@
                 </div>
 
                 <!-- Time Warning -->
-                <div class="d-flex align-items-center time-warning" id="timeWarning">
+                <div class="d-flex align-items-center time-warning d-none" id="timeWarning">
                     <i class="fa fa-triangle-exclamation fs-4 text-danger me-3"></i>
                     <div>
                         <div class="fw-bold text-danger">Extended Preparation Time</div>
@@ -137,44 +137,42 @@
                 </div>
 
                 <!-- Tabs -->
-                <ul class="nav nav-tabs mb-3" id="recipeTab" role="tablist">
+                <ul class="nav nav-tabs d-flex justify-content-around mb-3 pb-3" id="recipeTab" role="tablist">
                     <li class="nav-item" role="presentation">
                         <button class="nav-link active" id="ingredients-tab" data-bs-toggle="tab"
-                            data-bs-target="#ingredients" type="button" role="tab">Ingredients</button>
+                            data-bs-target="#ingredients" type="button" role="tab">
+                            <i class="fa fa-list-check"></i> Ingredients
+                        </button>
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link" id="instructions-tab" data-bs-toggle="tab"
-                            data-bs-target="#instructions" type="button" role="tab">Instructions</button>
+                            data-bs-target="#instructions" type="button" role="tab">
+                            <i class="fa fa-book-open"></i> Instructions
+                        </button>
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link" id="nutrition-tab" data-bs-toggle="tab" data-bs-target="#nutrition"
-                            type="button" role="tab">Nutrition</button>
+                            type="button" role="tab">
+                            <i class="fa fa-chart-pie"></i> Nutrition
+                        </button>
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link" id="tips-tab" data-bs-toggle="tab" data-bs-target="#tips" type="button"
-                            role="tab">Chef's Tips</button>
+                            role="tab">
+                            <i class="fa fa-lightbulb"></i> Chef's Tips
+                        </button>
                     </li>
                 </ul>
 
-                <div class="tab-content" id="recipeTabContent">
+                <!-- Tabs Content-->
+                <div class="tab-content mb-5" id="recipeTabContent">
+
                     <!-- Ingredients Tab -->
                     <div class="tab-pane fade show active" id="ingredients" role="tabpanel">
                         <ul class="list-unstyled">
                             <li class="d-flex align-items-start mb-2">
                                 <div class="ingredient-number">1</div>
-                                <span>1 cup quinoa</span>
-                            </li>
-                            <li class="d-flex align-items-start mb-2">
-                                <div class="ingredient-number">2</div>
-                                <span>Cherry tomatoes, halved</span>
-                            </li>
-                            <li class="d-flex align-items-start mb-2">
-                                <div class="ingredient-number">3</div>
-                                <span>Cucumber, diced</span>
-                            </li>
-                            <li class="d-flex align-items-start mb-2">
-                                <div class="ingredient-number">4</div>
-                                <span>Red onion, sliced</span>
+                                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
                             </li>
                         </ul>
                     </div>
@@ -183,34 +181,126 @@
                     <div class="tab-pane fade" id="instructions" role="tabpanel">
                         <div class="mb-3 d-flex">
                             <div class="step-number">1</div>
-                            <p>Rinse quinoa thoroughly. Cook according to package directions, usually 15 minutes.</p>
-                        </div>
-                        <div class="mb-3 d-flex">
-                            <div class="step-number">2</div>
-                            <p>While quinoa cooks, prepare all vegetables and set aside.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                         </div>
                     </div>
 
                     <!-- Nutrition Tab -->
-                    <div class="tab-pane fade" id="nutrition" role="tabpanel">
+                    <div class="tab-pane fade p-3" id="nutrition" role="tabpanel">
                         <div class="row g-3">
-                            <div class="col-6 p-3 bg-light rounded d-flex justify-content-between align-items-center">
-                                <span>Calories</span>
-                                <span class="fw-bold">480 kcal</span>
+
+                            <!-- Calories -->
+                            <div class="col-12 col-md-6">
+                                <div class="d-flex align-items-center justify-content-between bg-light nutrition-card">
+                                    <div class="d-flex align-items-center">
+                                        <div class="nutrition-icon d-flex align-items-center justify-content-center">
+                                            <i class="fa fa-fire"></i>
+                                        </div>
+                                        <span class="fw-semibold">Calories</span>
+                                    </div>
+                                    <span class="fw-bold" id="calories-value">580 kcal</span>
+                                </div>
                             </div>
-                            <div class="col-6 p-3 bg-light rounded d-flex justify-content-between align-items-center">
-                                <span>Protein</span>
-                                <span class="fw-bold">18g</span>
+
+                            <!-- Protein -->
+                            <div class="col-12 col-md-6">
+                                <div class="d-flex align-items-center justify-content-between bg-light nutrition-card">
+                                    <div class="d-flex align-items-center">
+                                        <div class="nutrition-icon bg-primary-subtle text-primary d-flex align-items-center justify-content-center"
+                                            style="width:40px;height:40px;">
+                                            <i class="fa fa-dumbbell"></i>
+                                        </div>
+                                        <span class="fw-semibold">Protein</span>
+                                    </div>
+                                    <span class="fw-bold" id="protein-value">24g</span>
+                                </div>
                             </div>
+
+                            <!-- Carbohydrates -->
+                            <div class="col-12 col-md-6">
+                                <div class="d-flex align-items-center justify-content-between bg-light nutrition-card">
+                                    <div class="d-flex align-items-center">
+                                        <div class="nutrition-icon bg-warning-subtle text-warning d-flex align-items-center justify-content-center"
+                                            style="width:40px;height:40px;">
+                                            <i class="fa fa-wheat-awn"></i>
+                                        </div>
+                                        <span class="fw-semibold">Carbohydrates</span>
+                                    </div>
+                                    <span class="fw-bold" id="carbs-value">68g</span>
+                                </div>
+                            </div>
+
+                            <!-- Fat -->
+                            <div class="col-12 col-md-6">
+                                <div class="d-flex align-items-center justify-content-between bg-light nutrition-card">
+                                    <div class="d-flex align-items-center">
+                                        <div class="nutrition-icon bg-danger-subtle text-danger d-flex align-items-center justify-content-center"
+                                            style="width:40px;height:40px;">
+                                            <i class="fa fa-droplet"></i>
+                                        </div>
+                                        <span class="fw-semibold">Fat</span>
+                                    </div>
+                                    <span class="fw-bold" id="fat-value">22g</span>
+                                </div>
+                            </div>
+
+                            <!-- Fiber -->
+                            <div class="col-12 col-md-6">
+                                <div class="d-flex align-items-center justify-content-between bg-light nutrition-card">
+                                    <div class="d-flex align-items-center">
+                                        <div class="nutrition-icon bg-success-subtle text-success d-flex align-items-center justify-content-center"
+                                            style="width:40px;height:40px;">
+                                            <i class="fa fa-seedling"></i>
+                                        </div>
+                                        <span class="fw-semibold">Fiber</span>
+                                    </div>
+                                    <span class="fw-bold" id="fiber-value">4g</span>
+                                </div>
+                            </div>
+
+                            <!-- Sodium -->
+                            <div class="col-12 col-md-6">
+                                <div class="d-flex align-items-center justify-content-between bg-light nutrition-card">
+                                    <div class="d-flex align-items-center">
+                                        <div class="nutrition-icon bg-pink-subtle text-pink d-flex align-items-center justify-content-center"
+                                            style="width:40px;height:40px;">
+                                            <i class="fa fa-cube"></i>
+                                        </div>
+                                        <span class="fw-semibold">Sodium</span>
+                                    </div>
+                                    <span class="fw-bold" id="sodium-value">920mg</span>
+                                </div>
+                            </div>
+
                         </div>
+
                     </div>
 
                     <!-- Chef Tips Tab -->
                     <div class="tab-pane fade" id="tips" role="tabpanel">
-                        <p>Use fresh parsley for best taste. Toast the quinoa for extra flavor.</p>
+
+                        <div class="overflow-auto" style="max-height: 350px;">
+                            <div class="d-flex flex-column gap-3">
+
+                                <!-- Tip Item -->
+                                <div class="d-flex align-items-start tip-item">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                    <p class="text-muted mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                </div>
+
+                            </div>
+                        </div>
+
                     </div>
 
                 </div>
+
+                <div class="d-flex align-items-center gap-3 mt-4 pt-4 border-top">
+                    <button id="try-another-btn" class="btn try-btn">
+                        <i class="fa fa-rotate"></i> Try Another Recipe
+                    </button>
+                </div>
+
             </div>
 
         </div>

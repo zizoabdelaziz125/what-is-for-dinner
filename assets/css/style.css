@@ -7,6 +7,7 @@ body {
 .navbar {
     padding: 20px 0px;
     background-color: #FFFFFF;
+    border-bottom: 2px solid #FFEDD4;
 }
 
 /* desktop-menu icons */
@@ -144,8 +145,8 @@ body {
 }
 
 .btn-orange{
-    font-size: 15px;
-    padding: 5px 10px;
+    font-size: 16px;
+    padding: 8px 15px;
     color: #F54A00;
     background-color: #FFEDD4;
 }
@@ -163,14 +164,35 @@ body {
     margin-bottom: 1rem;
 }
 
-.tab-button {
-    cursor: pointer;
+.nav-tabs .nav-link{
+    color: #4A5565;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    border: none;
+}
+
+.nav-tabs .nav-link:hover {
+    color: black !important;
+    border: none;
+}
+
+.nav-tabs .nav-link.active{
+    color: #F54A00 !important;
+    border: none;
+    border-bottom: 2px solid #F54A00;
+}
+
+#ingredients{
+    background-color: #FFF9EB;
+    padding: 25px 25px;
+    border-radius: 15px;
 }
 
 .ingredient-number {
     width: 1.5rem;
     height: 1.5rem;
-    background-color: #fd7e14;
+    background-color: #FF6900;
     color: #fff;
     border-radius: 50%;
     display: flex;
@@ -183,7 +205,7 @@ body {
 .step-number {
     width: 2.5rem;
     height: 2.5rem;
-    background-color: #fd7e14;
+    background-color: #FF6900;
     color: #fff;
     border-radius: 0.5rem;
     display: flex;
@@ -192,4 +214,54 @@ body {
     margin-right: 1rem;
     flex-shrink: 0;
     font-weight: bold;
+}
+
+.nutrition-card{
+    border-radius: 12px;
+    padding: 15px 15px;
+}
+
+.nutrition-icon{
+    padding: 15px 15px;
+    border-radius: 10px;
+    margin-right: 20px;
+    color: #F54A00;
+    background-color: #FFEDD4;
+} 
+
+.tip-item{
+    padding: 20px 20px;
+    border-left: 4px solid #FFB900;
+    background-color: #FFFBEB;
+    border-radius: 12px;
+}
+
+.tip-item i{
+    font-size: 18px;
+    margin-top: 5px;
+    margin-right: 20px;
+    color: #E17100;
+}
+
+.try-btn {
+    background: linear-gradient(to right, #f97316, #ef4444);
+    color: #fff;
+    padding: 10px 22px;
+    border-radius: 12px;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: 0.25s ease-in-out;
+    font-size: 15px;
+    border: none;
+}
+
+.try-btn:hover {
+    background: linear-gradient(to right, #fb7c1f, #f15555);
+    transform: scale(1.05);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+    color: #fff;
+}
+
+.try-btn i {
+    margin-right: 6px;
 }
