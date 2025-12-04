@@ -77,43 +77,48 @@
             <div class="col-lg-5 position-relative">
 
                 <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=800&auto=format&fit=crop"
-                    alt="Mediterranean Quinoa Bowl" class="recipe-image h-100 w-100">
+                    alt="Mediterranean Quinoa Bowl" class="recipe-image h-100 w-100" id="mealImage">
 
                 <div class="rating-badge">
                     <i class="fa fa-star text-warning"></i>
-                    <span class="fw-bold">4.5</span>
-                    <span class="text-muted">(156 reviews)</span>
+                    <span class="fw-bold" id="mealRating">4.5</span>
+                    <span class="text-muted" id="mealReviews">(156 reviews)</span>
                 </div>
 
                 <div class="row text-center info-overlay">
                     <div class="col">
                         <i class="fa fa-clock text-warning fs-4 mb-1"></i>
                         <div class="text-muted">Prep Time</div>
-                        <div class="fw-bold">20 min</div>
+                        <div class="fw-bold" id="mealPrepTime">20 min</div>
                     </div>
                     <div class="col">
                         <i class="fa fa-fire-burner text-danger fs-4 mb-1"></i>
                         <div class="text-muted">Cook Time</div>
-                        <div class="fw-bold">35 min</div>
+                        <div class="fw-bold" id="mealCookTime">35 min</div>
                     </div>
                     <div class="col">
                         <i class="fa fa-users text-primary fs-4 mb-1"></i>
                         <div class="text-muted">Servings</div>
-                        <div class="fw-bold">2 people</div>
+                        <div class="fw-bold" id="mealServings">2 people</div>
                     </div>
                 </div>
             </div>
 
             <!-- data container -->
-            <div class="col-lg-7 p-4">
+            <div class="col-lg-7 p-4 data-container">
 
                 <!-- Title & Badges -->
                 <div class="d-flex justify-content-between align-items-center mb-3">
                     <div>
-                        <span class="badge badge-success me-1">Easy</span>
-                        <span class="badge badge-primary">Mediterranean</span>
-                        <h2 class="mt-2 fw-bold">Mediterranean Quinoa Bowl</h2>
-                        <p class="text-muted">Healthy bowl with quinoa, vegetables, and tahini dressing</p>
+
+                        <div id="badgeContainer">
+                            <span class="badge badge-success me-1">Easy</span>
+                            <span class="badge badge-primary">Mediterranean</span>
+                        </div>
+
+                        <h2 class="mt-2 fw-bold" id="mealTitle">Mediterranean Quinoa Bowl</h2>
+                        <p class="text-muted" id="mealDescription">Healthy bowl with quinoa, vegetables, and tahini
+                            dressing</p>
                     </div>
 
                     <div class="d-flex align-items-center justify-content-center gap-2 h-100">
@@ -169,7 +174,7 @@
 
                     <!-- Ingredients Tab -->
                     <div class="tab-pane fade show active" id="ingredients" role="tabpanel">
-                        <ul class="list-unstyled">
+                        <ul class="list-unstyled" id="ingredientsList">
                             <li class="d-flex align-items-start mb-2">
                                 <div class="ingredient-number">1</div>
                                 <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
@@ -278,25 +283,22 @@
 
                     <!-- Chef Tips Tab -->
                     <div class="tab-pane fade" id="tips" role="tabpanel">
-
                         <div class="overflow-auto" style="max-height: 350px;">
-                            <div class="d-flex flex-column gap-3">
-
+                            <div class="d-flex flex-column gap-3" id="tipsList">
                                 <!-- Tip Item -->
                                 <div class="d-flex align-items-start tip-item">
                                     <i class="fa-solid fa-circle-check"></i>
-                                    <p class="text-muted mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    <p class="text-muted mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    </p>
                                 </div>
-
                             </div>
                         </div>
-
                     </div>
 
                 </div>
 
                 <div class="d-flex align-items-center gap-3 mt-4 pt-4 border-top">
-                    <button id="try-another-btn" class="btn try-btn">
+                    <button id="try-another-btn" class="btn try-btn" onclick="loadRandomMeal()">
                         <i class="fa fa-rotate"></i> Try Another Recipe
                     </button>
                 </div>

@@ -44,18 +44,17 @@ body {
     font-size: 1.25rem;
 }
 
-/* Mobile menu */
-#mobile-menu {
-    display: none;
+/* Desktop view */
+@media (min-width: 801px) {
+    #mobile-menu {
+        display: none !important;
+    }
 }
 
+/* Mobile view*/
 @media (max-width: 800px) {
     #desktop-menu {
-        display: none;
-    }
-
-    #mobile-menu {
-        display: block;
+        display: none !important;
     }
 }
 
@@ -63,10 +62,10 @@ body {
 .mobile-menu-btn {
     width: 100%;
     text-align: left;
-    padding: 0.5rem 1rem;
+    padding: 10px;
     border: none;
     background: none;
-    font-size: 1rem;
+    font-size: 16px;
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -74,6 +73,10 @@ body {
 
 .mobile-menu-btn:hover {
     color: #f97316;
+}
+
+#mobile-menu {
+    padding: 10px 20px;
 }
 
 /* ============================================================= */
@@ -124,8 +127,8 @@ body {
 
 }
 
-.tab-content {
-    max-height: 350px;
+.tab-content .tab-pane{
+    height: 350px;
     overflow-y: auto;
 }
 
