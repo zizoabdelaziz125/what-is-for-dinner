@@ -196,3 +196,5 @@ function loadRandomMeal() {
     )
     .join("");
 }
+
+loadRandomMeal();
